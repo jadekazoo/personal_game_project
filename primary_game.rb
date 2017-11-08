@@ -266,7 +266,7 @@ def establish_rooms()
 	necklace_one = Equipment.new("Dull Necklace", "A vaguely pretty necklace", false)
 	notebook_one = Item.new("Triangle Notebook", "Huh. Why is it triangular?")
 	temp_item_array = []
-	temp_exits_array = [1, false, false, false]
+	temp_exits_array = [1, 2, false, false]
 	temp_item_array.push(necklace_one, notebook_one) #necklace = index 0 & #notebook = index 1
 	room_one = Room.new("Living Room", "This is the living room.", temp_item_array, temp_exits_array, false)
 	@rooms.push(room_one)
@@ -280,11 +280,17 @@ def establish_rooms()
 	room_two = Room.new("The Kitchen", "This kitchen is very clean, it looks like it's from an advertisement.", temp_item_array, temp_exits_array, false)#true)
 	@rooms.push(room_two)
 
-	# Room "Bedroom", Index = 2
+	# Room "Bathroom", Index = 
 	
 
-	# Room "Bathroom", Index = 3
+	# Room "Bedroom", Index = 2
 	key_ring = Item.new("#{@player.name}'s Keys", "Your keys!")
+	baseball_cap = Equipment.new("Baseball Cap", "A baseball cap, it's dark grey.", false)
+	temp_item_array = []
+	temp_exits_array = [0, false, false, false]
+	temp_item_array.push(key_ring, baseball_cap)
+	room_three = Room.new("Bedroom", "This is an absolute mess.", temp_item_array, temp_exits_array, false)
+	@rooms.push(room_three)
 
 	# Room "Apartment Complex", Index = 4
 
